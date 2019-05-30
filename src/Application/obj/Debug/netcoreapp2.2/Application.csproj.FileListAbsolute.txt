@@ -1,0 +1,11 @@
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/obj/Debug/netcoreapp2.2/Application.csprojAssemblyReference.cache
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/obj/Debug/netcoreapp2.2/Application.csproj.CoreCompileInputs.cache
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/obj/Debug/netcoreapp2.2/Application.AssemblyInfoInputs.cache
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/obj/Debug/netcoreapp2.2/Application.AssemblyInfo.cs
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/bin/Debug/netcoreapp2.2/Application.deps.json
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/bin/Debug/netcoreapp2.2/Application.runtimeconfig.json
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/bin/Debug/netcoreapp2.2/Application.runtimeconfig.dev.json
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/bin/Debug/netcoreapp2.2/Application.dll
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/bin/Debug/netcoreapp2.2/Application.pdb
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/obj/Debug/netcoreapp2.2/Application.dll
+/Users/gabrielaletelier/My folder/CodeTest/src/Application/obj/Debug/netcoreapp2.2/Application.pdb

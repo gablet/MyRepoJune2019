@@ -1,0 +1,17 @@
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/obj/Debug/netcoreapp2.2/Test.Unit.csprojAssemblyReference.cache
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/obj/Debug/netcoreapp2.2/Test.Unit.csproj.CoreCompileInputs.cache
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/obj/Debug/netcoreapp2.2/Test.Unit.AssemblyInfoInputs.cache
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/obj/Debug/netcoreapp2.2/Test.Unit.AssemblyInfo.cs
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/Test.Unit.deps.json
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/Test.Unit.runtimeconfig.json
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/Test.Unit.runtimeconfig.dev.json
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/Test.Unit.dll
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/Test.Unit.pdb
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/Application.dll
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/bin/Debug/netcoreapp2.2/Application.pdb
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/obj/Debug/netcoreapp2.2/Test.Unit.csproj.CopyComplete
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/obj/Debug/netcoreapp2.2/Test.Unit.dll
+/Users/gabrielaletelier/My folder/CodeTest/src/Test.Unit/obj/Debug/netcoreapp2.2/Test.Unit.pdb
