@@ -19,9 +19,22 @@ namespace CodeTest.Application
         }
 
 
-        public bool IsFull(Bottle bottle)
+        public bool IsFull()
         {
-            if (bottle.CurrentVolume == bottle.Volume)
+            if (CurrentVolume == Volume)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public bool IsEmpty()
+        {
+            if (CurrentVolume == 0)
             {
                 return true;
             }

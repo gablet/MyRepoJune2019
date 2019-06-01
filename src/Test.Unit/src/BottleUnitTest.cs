@@ -37,5 +37,44 @@ namespace CodeTest.Test.Unit
             //-----VALIDATE-------
             Assert.IsType<ArgumentException>(exception);
         }
+
+        [Fact]
+        public void ValidateThatBottleIsEmptyWhenCorrentVolumeIsZero()
+        {
+            //-------SETUP------
+            Bottle bottle = new Bottle(3);
+
+            // ---- EXECUTE -----
+            bottle.CurrentVolume = 0;
+            bool resultTrue = bottle.IsEmpty();
+
+             bottle.CurrentVolume = 3;
+            bool resultFalse = bottle.IsEmpty();
+
+
+            //-----VALIDATE-------
+            Assert.Equal(true, resultTrue);
+            Assert.Equal(true, resultFalse);
+        }
+
+        
+        [Fact]
+        public void ValidateThatBottleIsFullWhenCorrentVolumeEqualsVolume()
+        {
+            //-------SETUP------
+            Bottle bottle = new Bottle(5);
+
+            // ---- EXECUTE -----
+            bottle.CurrentVolume = 5;
+            bool resultTrue = bottle.IsFull();
+
+            bottle.CurrentVolume = 3;
+            bool resultFalse = bottle.IsFull();
+
+
+            //-----VALIDATE-------
+            Assert.Equal(true, resultTrue);
+            Assert.Equal(false, resultFalse);
+        }
     }
 }

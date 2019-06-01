@@ -5,10 +5,10 @@ namespace CodeTest.Application
 {
     public class WaterMeasuringService
     {
-        public int MeasureVolumeTest(Bottle firstBottle, Bottle secondBottle, int litersToMeasure)
+        public int MeasureVolumeTest(Bottle bottle1, Bottle bottle2, int litersToMeasure)
         {
-            var firstMeasureResult = MeasureWater(firstBottle, secondBottle, litersToMeasure);
-            var secondMeasureResult = MeasureWater(secondBottle, firstBottle, litersToMeasure);
+            var firstMeasureResult = MeasureWater(bottle1, bottle2, litersToMeasure);
+            var secondMeasureResult = MeasureWater(bottle2, bottle1, litersToMeasure);
 
             if (firstMeasureResult < secondMeasureResult)
             {
@@ -27,20 +27,21 @@ namespace CodeTest.Application
             while (firstBottle.CurrentVolume != litersToMeasure && secondBottle.CurrentVolume != litersToMeasure)
             {
 
-                if (IsEmpty(firstBottle))
+                if (firstBottle.IsEmpty())
                 {
                     FillBottle(firstBottle);
-                    steps ++;
+                    steps++;
                 }
 
-                if (IsFull(secondBottle))
+                if (secondBottle.IsFull())
                 {
                     EmptyBottle(secondBottle);
-                    steps ++;
+                    steps++;
                 }
 
-                TransferWater(firstBottle, secondBottle, firstBottle.CurrentVolume);
-                steps ++;
+                TransferWater(firstBottle, secondBottle);
+                steps++;
+
             }
             EmptyBottle(firstBottle);
             EmptyBottle(secondBottle);
@@ -48,60 +49,33 @@ namespace CodeTest.Application
         }
 
 
-        private void TransferWater(Bottle sourceBottle, Bottle targetBottle, int litersToTransfer)
+        public void TransferWater(Bottle sourceBottle, Bottle targetBottle)
         {
 
-            for (int i = 0; i < litersToTransfer; i++)
+            while (!targetBottle.IsFull() && !sourceBottle.IsEmpty())
             {
-                while (!IsFull(targetBottle) && !IsEmpty(sourceBottle))
-                {
-                    targetBottle.CurrentVolume ++;
-                    sourceBottle.CurrentVolume --;
-                }
+                targetBottle.CurrentVolume++;
+                sourceBottle.CurrentVolume--;
             }
         }
 
-
-        private int AmoutOfVolumeLeft(Bottle bottle)
+        public void EmptyBottle(Bottle bottle)
         {
-            return bottle.Volume - bottle.CurrentVolume;
-        }
 
-
-        private bool IsEmpty(Bottle bottle)
-        {
-            if (bottle.CurrentVolume == 0)
+            if(bottle.CurrentVolume == 0)
             {
-                return true;
+                throw new ArgumentException("Bottle is already empty");
             }
-            else
-            {
-                return false;
-            }
-        }
-
-
-        private void EmptyBottle(Bottle bottle)
-        {
             bottle.CurrentVolume = 0;
-        }
-
-
-        private bool IsFull(Bottle bottle)
-        {
-            if (bottle.CurrentVolume == bottle.Volume)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
 
 
         public void FillBottle(Bottle bottle)
         {
+            if(bottle.CurrentVolume == bottle.Volume)
+            {
+                throw new ArgumentException("Bottle is already full");
+            }
             bottle.CurrentVolume = bottle.Volume;
         }
     }
