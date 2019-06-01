@@ -24,6 +24,9 @@ namespace CodeTest.Application
         private int MeasureWater(Bottle firstBottle, Bottle secondBottle, int litersToMeasure)
         {
             int steps = 0;
+            if (!firstBottle.IsEmpty()) EmptyBottle(firstBottle);
+            if (!secondBottle.IsEmpty()) EmptyBottle(secondBottle);
+            
             while (firstBottle.CurrentVolume != litersToMeasure && secondBottle.CurrentVolume != litersToMeasure)
             {
 
@@ -43,8 +46,7 @@ namespace CodeTest.Application
                 steps++;
 
             }
-            EmptyBottle(firstBottle);
-            EmptyBottle(secondBottle);
+
             return steps;
         }
 
@@ -62,7 +64,7 @@ namespace CodeTest.Application
         public void EmptyBottle(Bottle bottle)
         {
 
-            if(bottle.CurrentVolume == 0)
+            if (bottle.CurrentVolume == 0)
             {
                 throw new ArgumentException("Bottle is already empty");
             }
@@ -72,7 +74,7 @@ namespace CodeTest.Application
 
         public void FillBottle(Bottle bottle)
         {
-            if(bottle.CurrentVolume == bottle.Volume)
+            if (bottle.CurrentVolume == bottle.Volume)
             {
                 throw new ArgumentException("Bottle is already full");
             }
