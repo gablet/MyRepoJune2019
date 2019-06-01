@@ -14,8 +14,8 @@ namespace CodeTest.Application
             {
                 throw new ArgumentException();
             }
-            this.Volume = volume;
-            this.CurrentVolume = 0;
+            Volume = volume;
+            CurrentVolume = 0;
         }
 
 
