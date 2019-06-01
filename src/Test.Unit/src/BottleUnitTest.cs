@@ -18,7 +18,7 @@ namespace CodeTest.Test.Unit
             Bottle bottle2 = new Bottle(volume2);
 
 
-            // ---- EXECUTE -----
+            //-----VALIDATE-------
             Assert.Equal(volume1, bottle1.Volume);
             Assert.Equal(volume2, bottle2.Volume);
         }
