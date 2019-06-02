@@ -39,7 +39,7 @@ namespace CodeTest.Test.Unit
         }
 
         [Fact]
-        public void ValidateThatBottleIsEmptyWhenCorrentVolumeIsZero()
+        public void ValidateThatBottleIsEmptyWhenCurrentVolumeIsZero()
         {
             //-------SETUP------
             Bottle bottle = new Bottle(3);
@@ -59,7 +59,7 @@ namespace CodeTest.Test.Unit
 
         
         [Fact]
-        public void ValidateThatBottleIsFullWhenCorrentVolumeEqualsVolume()
+        public void ValidateThatBottleIsFullWhenCurrentVolumeEqualsVolume()
         {
             //-------SETUP------
             Bottle bottle = new Bottle(5);
