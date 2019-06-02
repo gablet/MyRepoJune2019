@@ -5,46 +5,37 @@ namespace CodeTest.Application
 {
     public class WaterMeasuringService
     {
-        public int MeasureVolumeTest(Bottle bottle1, Bottle bottle2, int litersToMeasure)
+        public int LeastAmountOfStepsToMeasureWater(Bottle bottle1, Bottle bottle2, int volumeToMeasure)
         {
-            var firstMeasureResult = MeasureWater(bottle1, bottle2, litersToMeasure);
-            var secondMeasureResult = MeasureWater(bottle2, bottle1, litersToMeasure);
+            int firstMeasureResult = MeasureWater(bottle1, bottle2, volumeToMeasure);
+            int secondMeasureResult = MeasureWater(bottle2, bottle1, volumeToMeasure);
 
-            if (firstMeasureResult < secondMeasureResult)
-            {
-                return firstMeasureResult;
-            }
-            else
-            {
-                return secondMeasureResult;
-            }
+            return Math.Min(firstMeasureResult, secondMeasureResult);
         }
 
 
-        private int MeasureWater(Bottle firstBottle, Bottle secondBottle, int litersToMeasure)
+        private int MeasureWater(Bottle bottle1, Bottle bottle2, int volumeToMeasure)
         {
             int steps = 0;
-            if (!firstBottle.IsEmpty()) EmptyBottle(firstBottle);
-            if (!secondBottle.IsEmpty()) EmptyBottle(secondBottle);
+            if (!bottle1.IsEmpty()) EmptyBottle(bottle1);
+            if (!bottle2.IsEmpty()) EmptyBottle(bottle2);
             
-            while (firstBottle.CurrentVolume != litersToMeasure && secondBottle.CurrentVolume != litersToMeasure)
+            while (bottle1.CurrentVolume != volumeToMeasure && bottle2.CurrentVolume != volumeToMeasure)
             {
-
-                if (firstBottle.IsEmpty())
+                if (bottle1.IsEmpty())
                 {
-                    FillBottle(firstBottle);
+                    FillBottle(bottle1);
                     steps++;
                 }
 
-                if (secondBottle.IsFull())
+                if (bottle2.IsFull())
                 {
-                    EmptyBottle(secondBottle);
+                    EmptyBottle(bottle2);
                     steps++;
                 }
 
-                TransferWater(firstBottle, secondBottle);
+                TransferWater(bottle1, bottle2);
                 steps++;
-
             }
 
             return steps;
@@ -60,6 +51,7 @@ namespace CodeTest.Application
                 sourceBottle.CurrentVolume--;
             }
         }
+
 
         public void EmptyBottle(Bottle bottle)
         {

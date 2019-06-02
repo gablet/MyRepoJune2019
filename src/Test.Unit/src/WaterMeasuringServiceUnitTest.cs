@@ -16,7 +16,7 @@ namespace CodeTest.Test.Unit
             WaterMeasuringService measuringServce = new WaterMeasuringService();
 
             // ---- EXECUTE -----
-            var result = measuringServce.MeasureVolumeTest(sourceBottle, targetBottle, amoutToMeasure);
+            var result = measuringServce.LeastAmountOfStepsToMeasureWater(sourceBottle, targetBottle, amoutToMeasure);
 
             //-----VALIDATE-------
             Assert.Equal(6, result);
@@ -40,7 +40,7 @@ namespace CodeTest.Test.Unit
 
 
         [Fact]
-        public void ValidateThatAnExceptionIsThrownWhenEmptyingANEmptyBottle()
+        public void ValidateThatAnExceptionIsThrownWhenEmptyingAnEmptyBottle()
         {
             //-------SETUP------
             Bottle bottle = new Bottle(5);
